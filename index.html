@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film-Bewertungsseite</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<header>
+    <img src="images/logo.png" alt="Logo" id="logo">
+    <nav>
+        <button onclick="navigateTo('welcomePage')">Startseite</button>
+        <button onclick="navigateTo('filmList')">Filmliste</button>
+        <button onclick="navigateTo('addFilm')">Film hinzufügen</button>
+        <button onclick="navigateTo('overview')">Gesamtübersicht</button>
+    </nav>
+</header>
+<main>
+    <section id="welcomePage">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Willkommen auf der Film-Bewertungsseite</h1>
+                <p>Entdecken Sie die neuesten Filme, lesen Sie Rezensionen und bewerten Sie Ihre Lieblingsfilme.</p>
+                <button onclick="navigateTo('filmList')">Filmliste ansehen</button>
+            </div>
+        </div>
+    </section>
+    <div id="loading" class="hidden">Lädt...</div>
+    <section id="filmList" class="hidden">
+        <input type="text" id="searchBar" placeholder="Film suchen..." oninput="filterFilms()">
+        <!-- Filme werden hier dynamisch eingefügt -->
+    </section>
+    <section id="filmDetail" class="hidden">
+        <!-- Filmdetails und Rezensionen -->
+    </section>
+    <section id="addFilm" class="hidden">
+        <h2>Neuen Film hinzufügen</h2>
+        <form id="filmForm" onsubmit="submitFilm(event)">
+            <input type="text" id="filmTitle" placeholder="Filmtitel" required>
+            <input type="text" id="filmYear" placeholder="Jahr" required>
+            <input type="text" id="filmGenre" placeholder="Genre" required>
+            <input type="text" id="filmDirector" placeholder="Regisseur" required>
+            <input type="url" id="filmPoster" placeholder="Poster URL" required>
+            <textarea id="filmDescription" placeholder="Beschreibung" required></textarea>
+            <button type="submit">Film hinzufügen</button>
+        </form>
+    </section>
+    <section id="overview" class="hidden">
+        <h2>Gesamtübersicht</h2>
+        <!-- Gesamtübersicht der Filme -->
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Film-Bewertungsseite</p>
+</footer>
+<script src="scripts/main.js"></script>
+</body>
+</html>
