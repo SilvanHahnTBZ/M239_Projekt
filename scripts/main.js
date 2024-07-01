@@ -50,6 +50,7 @@ async function deleteFilm(id) {
     await fetch(`${API_URL}/films/${id}`, {
         method: 'DELETE'
     });
+    loadFilms(); // Reload films after deletion
 }
 
 async function addReview(filmId, review) {
@@ -60,43 +61,40 @@ async function addReview(filmId, review) {
 
 // Hauptfunktionalität (ehemals main.js)
 document.addEventListener('DOMContentLoaded', () => {
-    navigateTo('welcomePage');
+    const path = window.location.pathname;
+    if (path.includes('film-list.html')) {
+        loadFilms();
+        window.addEventListener('scroll', toggleFooterVisibility);
+    } else if (path.includes('overview.html')) {
+        loadOverview();
+    }
 });
 
-function navigateTo(page) {
-    const sections = ['welcomePage', 'filmList', 'filmDetail', 'addFilm', 'overview'];
-    sections.forEach(section => {
-        document.getElementById(section).classList.add('hidden');
-    });
-    document.getElementById(page).classList.remove('hidden');
-    if (page === 'filmList') loadFilms();
-    if (page === 'overview') loadOverview();
-}
-
 async function loadFilms() {
-    document.getElementById('loading').classList.remove('hidden');
+    const loadingElement = document.getElementById('loading');
+    if (loadingElement) {
+        loadingElement.classList.remove('hidden');
+    }
     const films = await getFilms();
     displayFilmList(films);
-    document.getElementById('loading').classList.add('hidden');
+    if (loadingElement) {
+        loadingElement.classList.add('hidden');
+    }
 }
 
 function displayFilmList(films) {
-    const filmList = document.getElementById('filmList');
-    filmList.innerHTML = '';
+    const filmsContainer = document.getElementById('filmsContainer');
+    if (!filmsContainer) return;
+    filmsContainer.innerHTML = '';
     films.forEach(film => {
         const filmItem = document.createElement('div');
         filmItem.className = 'filmItem';
         filmItem.innerHTML = `
             <img src="${film.poster}" alt="${film.title}">
-            <div class="details">
-                <h2>${film.title} (${film.year})</h2>
-                <p>${film.genre}</p>
-                <p>Directed by: ${film.director}</p>
-                <p>Average Rating: ${calculateAverageRating(film.reviews)} (${film.reviews.length} reviews)</p>
-                <button onclick="showFilmDetail(${film.id})">Details</button>
-            </div>
+            <div class="filmTitle">${film.title}</div>
         `;
-        filmList.appendChild(filmItem);
+        filmItem.onclick = () => showFilmDetail(film.id);
+        filmsContainer.appendChild(filmItem);
     });
     document.getElementById('filmList').classList.remove('hidden');
     document.getElementById('filmDetail').classList.add('hidden');
@@ -104,10 +102,10 @@ function displayFilmList(films) {
 
 function filterFilms() {
     const query = document.getElementById('searchBar').value.toLowerCase();
-    const filmList = document.getElementById('filmList');
-    const films = Array.from(filmList.getElementsByClassName('filmItem'));
+    const filmsContainer = document.getElementById('filmsContainer');
+    const films = Array.from(filmsContainer.getElementsByClassName('filmItem'));
     films.forEach(film => {
-        const title = film.querySelector('.details h2').innerText.toLowerCase();
+        const title = film.querySelector('.filmTitle').innerText.toLowerCase();
         if (title.includes(query)) {
             film.style.display = 'block';
         } else {
@@ -122,7 +120,10 @@ async function showFilmDetail(filmId) {
     document.getElementById('loading').classList.add('hidden');
 
     const filmDetail = document.getElementById('filmDetail');
+    if (!filmDetail) return;
     filmDetail.innerHTML = `
+        <button onclick="navigateTo('film-list.html')">Zurück zur Filmliste</button>
+        <button onclick="deleteCurrentFilm(${film.id})">Film löschen</button>
         <div class="filmDetail">
             <img src="${film.poster}" alt="${film.title}">
             <h2>${film.title} (${film.year})</h2>
@@ -149,6 +150,11 @@ async function showFilmDetail(filmId) {
     `;
     document.getElementById('filmList').classList.add('hidden');
     filmDetail.classList.remove('hidden');
+}
+
+async function deleteCurrentFilm(filmId) {
+    await deleteFilm(filmId);
+    navigateTo('film-list.html');
 }
 
 async function submitReview(event, filmId) {
@@ -179,23 +185,45 @@ async function submitFilm(event) {
 }
 
 async function loadOverview() {
-    document.getElementById('loading').classList.remove('hidden');
+    const loadingElement = document.getElementById('loading');
+    if (loadingElement) {
+        loadingElement.classList.remove('hidden');
+    }
     const films = await getFilms();
-    const overviewSection = document.getElementById('overview');
-    overviewSection.innerHTML = '<h2>Gesamtübersicht</h2>';
+    displayOverview(films);
+    if (loadingElement) {
+        loadingElement.classList.add('hidden');
+    }
+}
+
+function displayOverview(films) {
+    const overviewContainer = document.getElementById('overviewContainer');
+    if (!overviewContainer) return;
+    overviewContainer.innerHTML = '';
     films.forEach(film => {
         const filmOverviewItem = document.createElement('div');
-        filmOverviewItem.className = 'filmOverviewItem';
+        filmOverviewItem.className = 'overviewItem';
         filmOverviewItem.innerHTML = `
             <h3>${film.title} (${film.year})</h3>
             <p>Genre: ${film.genre}</p>
             <p>Director: ${film.director}</p>
             <p>Average Rating: ${calculateAverageRating(film.reviews)} (${film.reviews.length} reviews)</p>
         `;
-        overviewSection.appendChild(filmOverviewItem);
+        overviewContainer.appendChild(filmOverviewItem);
     });
-    document.getElementById('loading').classList.add('hidden');
-    overviewSection.classList.remove('hidden');
+}
+
+function toggleFooterVisibility() {
+    const footer = document.querySelector('footer');
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        footer.classList.add('visible');
+    } else {
+        footer.classList.remove('visible');
+    }
+}
+
+function navigateTo(page) {
+    window.location.href = page;
 }
 
 window.showFilmDetail = showFilmDetail;

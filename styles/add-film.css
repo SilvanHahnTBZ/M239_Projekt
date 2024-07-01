@@ -1,0 +1,29 @@
+/* styles/add-film.css */
+@import url('main.css');
+
+#addFilm {
+    background-color: #FFFFFF; /* White */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin: 20px 0;
+}
+
+#filmForm input, #filmForm textarea, #filmForm button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#filmForm button {
+    background-color: #1B9AAA; /* Blue (Munsell) */
+    color: #FFFFFF; /* White */
+    cursor: pointer;
+}
+
+#filmForm button:hover {
+    background-color: #17a2a0; /* Slightly lighter blue */
+}

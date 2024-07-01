@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film-Bewertungsseite</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>Gesamtübersicht</title>
+    <link rel="stylesheet" href="styles/overview.css">
 </head>
 <body>
 <header>
@@ -17,14 +17,10 @@
     </nav>
 </header>
 <main>
-    <section id="welcomePage">
-        <div class="hero">
-            <div class="hero-content">
-                <h1>Willkommen auf der Film-Bewertungsseite</h1>
-                <p>Entdecken Sie die neuesten Filme, lesen Sie Rezensionen und bewerten Sie Ihre Lieblingsfilme.</p>
-                <a href="film-list.html" class="button">Filmliste ansehen</a>
-            </div>
-        </div>
+    <div id="loading" class="hidden">Lädt...</div>
+    <section id="overview">
+        <h2>Gesamtübersicht</h2>
+        <div id="overviewContainer"></div>
     </section>
 </main>
 <footer class="hidden">

@@ -1,0 +1,36 @@
+/* styles/overview.css */
+@import url('main.css');
+
+#overview {
+    background-color: #FFFFFF; /* White */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 20px 0;
+}
+
+#overviewContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overviewItem {
+    width: 100%;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #F5F1E3; /* Old lace */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overviewItem h3 {
+    color: #050505; /* Black */
+}
+
+.overviewItem p {
+    color: #050505; /* Black */
+}

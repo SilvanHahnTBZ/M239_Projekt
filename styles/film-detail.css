@@ -1,0 +1,49 @@
+/* styles/film-detail.css */
+@import url('main.css');
+
+#filmDetail {
+    width: 60%;
+    background-color: #FFFFFF; /* White */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.filmDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filmDetail img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.review {
+    background-color: #DDDBCB; /* Bone */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#reviewForm input, #reviewForm textarea, #reviewForm button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#reviewForm button {
+    background-color: #1B9AAA; /* Blue (Munsell) */
+    color: #FFFFFF; /* White */
+    cursor: pointer;
+}
+
+#reviewForm button:hover {
+    background-color: #17a2a0; /* Slightly lighter blue */
+}

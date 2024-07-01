@@ -1,15 +1,15 @@
 /* styles/main.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #F5F1E3; /* Old lace */
+    color: #050505; /* Black */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #444;
-    color: #fff;
+    background-color: #1B9AAA; /* Blue (Munsell) */
+    color: #FFFFFF; /* White */
     padding: 10px 20px;
     text-align: center;
     display: flex;
@@ -21,18 +21,19 @@ header {
     width: 100px;
 }
 
-nav button {
+nav a {
     padding: 10px 20px;
     margin: 10px;
-    background-color: #444;
-    color: #fff;
+    background-color: #1B9AAA; /* Blue (Munsell) */
+    color: #FFFFFF; /* White */
     border: none;
     border-radius: 5px;
+    text-decoration: none;
     cursor: pointer;
 }
 
-nav button:hover {
-    background-color: #555;
+nav a:hover {
+    background-color: #17a2a0; /* Slightly lighter blue */
 }
 
 main {
@@ -45,7 +46,7 @@ main {
 .hero {
     width: 100%;
     height: 100vh;
-    background-image: url('../images/hero-background.jpg');
+    background-image: url('images/hero-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -53,7 +54,7 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;
+    color: #FFFFFF; /* White */
     position: relative;
 }
 
@@ -84,106 +85,32 @@ main {
     margin-bottom: 40px;
 }
 
-.hero button {
+.hero a.button {
     padding: 15px 30px;
     font-size: 1em;
-    background-color: #444;
-    color: #fff;
+    background-color: #1B9AAA; /* Blue (Munsell) */
+    color: #FFFFFF; /* White */
     border: none;
     border-radius: 5px;
+    text-decoration: none;
     cursor: pointer;
 }
 
-.hero button:hover {
-    background-color: #555;
-}
-
-#searchBar {
-    width: 50%;
-    padding: 10px;
-    margin-top: 10px;
-}
-
-.hidden {
-    display: none;
-}
-
-button {
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #444;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-.filmItem, .filmOverviewItem {
-    background-color: #fff;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-}
-
-.filmItem img {
-    width: 100px;
-    height: 150px;
-    margin-right: 20px;
-}
-
-.filmItem .details, .filmOverviewItem .details {
-    flex-grow: 1;
-}
-
-.filmDetail {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.review {
-    background-color: #eee;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-#reviewForm, #filmForm {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-}
-
-#reviewForm input, #reviewForm textarea, #reviewForm button,
-#filmForm input, #filmForm textarea, #filmForm button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-#loading {
-    text-align: center;
-    font-size: 1.5em;
-    padding: 20px;
-    color: #555;
+.hero a.button:hover {
+    background-color: #17a2a0; /* Slightly lighter blue */
 }
 
 footer {
-    background-color: #444;
-    color: #fff;
+    background-color: #1B9AAA; /* Blue (Munsell) */
+    color: #FFFFFF; /* White */
     text-align: center;
     padding: 10px 20px;
     position: fixed;
     width: 100%;
     bottom: 0;
+    display: none;
+}
+
+footer.visible {
+    display: block;
 }
