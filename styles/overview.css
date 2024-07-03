@@ -8,29 +8,60 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 80%;
     margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #overviewContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .overviewItem {
     width: 100%;
     margin: 10px 0;
     padding: 20px;
-    background-color: #F5F1E3; /* Old lace */
+    background-color: #E3F2FD; /* Light Blue */
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.overviewItem:hover {
+    transform: scale(1.05);
+    background-color: #BBDEFB; /* Lighter Blue */
 }
 
 .overviewItem h3 {
-    color: #050505; /* Black */
+    color: #0D47A1; /* Dark Blue */
+    margin-bottom: 10px;
 }
 
 .overviewItem p {
-    color: #050505; /* Black */
+    color: #0D47A1; /* Dark Blue */
+    margin: 5px 0;
+}
+
+.overviewItem img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.star {
+    color: gold;
+    font-size: 1.5em;
+    margin-right: 5px;
 }

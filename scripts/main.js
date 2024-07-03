@@ -7,7 +7,7 @@ function formatDate(date) {
 }
 
 function calculateAverageRating(reviews) {
-    const total = reviews.reduce((sum, review) => sum + review.rating, 0);
+    const total = reviews.reduce((sum, review) => sum + Number(review.rating), 0);
     return (total / reviews.length).toFixed(1);
 }
 
@@ -50,7 +50,7 @@ async function deleteFilm(id) {
     await fetch(`${API_URL}/films/${id}`, {
         method: 'DELETE'
     });
-    loadFilms(); // Reload films after deletion
+    navigateTo('film-list.html');
 }
 
 async function addReview(filmId, review) {
@@ -62,11 +62,15 @@ async function addReview(filmId, review) {
 // Hauptfunktionalität (ehemals main.js)
 document.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname;
+    const urlParams = new URLSearchParams(window.location.search);
+    const filmId = urlParams.get('id');
     if (path.includes('film-list.html')) {
         loadFilms();
         window.addEventListener('scroll', toggleFooterVisibility);
     } else if (path.includes('overview.html')) {
         loadOverview();
+    } else if (path.includes('film-detail.html') && filmId) {
+        showFilmDetail(filmId);
     }
 });
 
@@ -90,10 +94,11 @@ function displayFilmList(films) {
         const filmItem = document.createElement('div');
         filmItem.className = 'filmItem';
         filmItem.innerHTML = `
-            <img src="${film.poster}" alt="${film.title}">
-            <div class="filmTitle">${film.title}</div>
+            <div onclick="navigateToDetail('${film.id}')">
+                <img src="${film.poster}" alt="${film.title}">
+                <div class="filmTitle">${film.title}</div>
+            </div>
         `;
-        filmItem.onclick = () => showFilmDetail(film.id);
         filmsContainer.appendChild(filmItem);
     });
     document.getElementById('filmList').classList.remove('hidden');
@@ -115,15 +120,20 @@ function filterFilms() {
 }
 
 async function showFilmDetail(filmId) {
-    document.getElementById('loading').classList.remove('hidden');
+    const loadingElement = document.getElementById('loading');
+    if (loadingElement) {
+        loadingElement.classList.remove('hidden');
+    }
     const film = await getFilmById(filmId);
-    document.getElementById('loading').classList.add('hidden');
+    if (loadingElement) {
+        loadingElement.classList.add('hidden');
+    }
 
-    const filmDetail = document.getElementById('filmDetail');
-    if (!filmDetail) return;
-    filmDetail.innerHTML = `
-        <button onclick="navigateTo('film-list.html')">Zurück zur Filmliste</button>
-        <button onclick="deleteCurrentFilm(${film.id})">Film löschen</button>
+    const filmDetailContainer = document.getElementById('filmDetailContainer');
+    if (!filmDetailContainer) return;
+    filmDetailContainer.innerHTML = `
+        <button onclick="navigateTo('film-list.html')" class="button">Zurück zur Filmliste</button>
+        <button onclick="deleteCurrentFilm('${film.id}')" class="button">Film löschen</button>
         <div class="filmDetail">
             <img src="${film.poster}" alt="${film.title}">
             <h2>${film.title} (${film.year})</h2>
@@ -139,17 +149,15 @@ async function showFilmDetail(filmId) {
                     <p>Date: ${formatDate(review.date)}</p>
                 </div>
             `).join('')}
-            <form id="reviewForm" onsubmit="submitReview(event, ${film.id})">
+            <form id="reviewForm" onsubmit="submitReview(event, '${film.id}')">
                 <h3>Add a Review:</h3>
                 <input type="text" id="username" placeholder="Your name" required>
                 <input type="number" id="rating" placeholder="Rating (1-5)" min="1" max="5" required>
                 <textarea id="reviewText" placeholder="Your review" required></textarea>
-                <button type="submit">Submit</button>
+                <button type="submit" class="button">Submit</button>
             </form>
         </div>
     `;
-    document.getElementById('filmList').classList.add('hidden');
-    filmDetail.classList.remove('hidden');
 }
 
 async function deleteCurrentFilm(filmId) {
@@ -181,7 +189,7 @@ async function submitFilm(event) {
         reviews: []
     };
     await addFilm(newFilm);
-    loadFilms();
+    navigateTo('film-list.html'); // Navigation zur Filmliste
 }
 
 async function loadOverview() {
@@ -205,9 +213,13 @@ function displayOverview(films) {
         filmOverviewItem.className = 'overviewItem';
         filmOverviewItem.innerHTML = `
             <h3>${film.title} (${film.year})</h3>
+            <img src="${film.poster}" alt="${film.title}">
             <p>Genre: ${film.genre}</p>
             <p>Director: ${film.director}</p>
-            <p>Average Rating: ${calculateAverageRating(film.reviews)} (${film.reviews.length} reviews)</p>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span>${calculateAverageRating(film.reviews)} (${film.reviews.length} reviews)</span>
+            </div>
         `;
         overviewContainer.appendChild(filmOverviewItem);
     });
@@ -226,4 +238,11 @@ function navigateTo(page) {
     window.location.href = page;
 }
 
+function navigateToDetail(filmId) {
+    window.location.href = `film-detail.html?id=${filmId}`;
+}
+
 window.showFilmDetail = showFilmDetail;
+window.deleteCurrentFilm = deleteCurrentFilm;
+window.submitReview = submitReview;
+window.submitFilm = submitFilm;

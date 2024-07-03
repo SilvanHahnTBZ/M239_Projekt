@@ -4,31 +4,57 @@
 #filmList {
     width: 100%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#searchBar {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+#searchBar:focus {
+    border-color: #1B9AAA;
+    outline: none;
 }
 
 #filmsContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
 }
 
 .filmItem {
     position: relative;
-    width: calc(100% / 6 - 10px);
+    width: calc(100% / 6 - 20px);
     overflow: hidden;
     cursor: pointer;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.filmItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .filmItem img {
     width: 100%;
     height: auto;
     display: block;
-}
-
-.filmItem:hover .filmTitle {
-    opacity: 1;
+    border-radius: 5px;
 }
 
 .filmTitle {
@@ -42,4 +68,9 @@
     padding: 10px;
     opacity: 0;
     transition: opacity 0.3s ease;
+    width: 100%;
+}
+
+.filmItem:hover .filmTitle {
+    opacity: 1;
 }

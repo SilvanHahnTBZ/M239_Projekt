@@ -114,3 +114,18 @@ footer {
 footer.visible {
     display: block;
 }
+/* styles/main.css */
+button, .button {
+    padding: 10px 20px;
+    background-color: #1B9AAA; /* Blue (Munsell) */
+    color: #FFFFFF; /* White */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover, .button:hover {
+    background-color: #17a2a0; /* Slightly lighter blue */
+}

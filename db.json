@@ -1,72 +1,83 @@
 {
   "films": [
     {
-      "id": "1",
-      "title": "Inception",
-      "year": 2010,
-      "genre": "Sci-Fi",
-      "director": "Christopher Nolan",
-      "poster": "https://via.placeholder.com/100x150",
-      "description": "A thief who steals corporate secrets through the use of dream-sharing technology...",
-      "reviews": [
-        {
-          "username": "Alice",
-          "rating": 5,
-          "text": "Amazing movie!",
-          "date": "2023-06-01T12:00:00Z"
-        },
-        {
-          "username": "Bob",
-          "rating": 4,
-          "text": "Great visuals and story.",
-          "date": "2023-06-02T12:00:00Z"
-        },
-        {
-          "username": "Silvan.hahn",
-          "rating": "1",
-          "text": "shit",
-          "date": "2024-07-01T06:53:40.137Z"
-        }
-      ]
-    },
-    {
-      "id": "c188",
-      "title": "Garfield",
-      "year": "2002",
-      "genre": "IDK",
-      "director": "Silvan",
-      "poster": "https://www.google.com/search?q=garfield&rlz=1C1VDKB_deCH1068CH1072&oq=garfield&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyEAgBEC4YgwEY1AIYsQMYgAQyEAgCEC4YgwEY1AIYsQMYgAQyEAgDEC4YgwEY1AIYsQMYgAQyBwgEEAAYgAQyBwgFEAAYgAQyCggGEC4Y1AIYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgzMDMzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8",
-      "description": "dssdvsv",
+      "id": "30c2",
+      "title": "ejrigheruge",
+      "year": "ergergerge",
+      "genre": "ergergergr",
+      "director": "hrthrthrth",
+      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
+      "description": "a",
       "reviews": []
     },
     {
-      "id": "4431",
-      "title": "Garfield",
-      "year": "2002",
-      "genre": "IDK",
-      "director": "Silvan",
-      "poster": "https://www.luzernerzeitung.ch/kultur/ein-philosoph-von-dem-wir-etwas-lernen-konnen-ld.1030262",
-      "description": "dssdvsv",
+      "id": "78f7",
+      "title": "ejrigheruge",
+      "year": "ergergerge",
+      "genre": "ergergergr",
+      "director": "hrthrthrth",
+      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
+      "description": "a",
       "reviews": []
     },
     {
-      "id": "cc3d",
-      "title": "Garfield",
-      "year": "2002",
-      "genre": "IDK",
-      "director": "Silvan",
-      "poster": "https://www.sueddeutsche.de/2022/06/22/784ce0bc-0a59-44ee-b19c-2a54ef5f0072.jpeg?q=60&fm=jpeg&width=1000&rect=4%2C0%2C1096%2C617",
-      "description": "dssdvsv",
+      "id": "7e7e",
+      "title": "ejrigheruge",
+      "year": "ergergerge",
+      "genre": "ergergergr",
+      "director": "hrthrthrth",
+      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
+      "description": "a",
       "reviews": []
     },
     {
-      "id": "2c8e",
-      "title": "Garfield",
-      "year": "2002",
-      "genre": "IDK",
-      "director": "Silvan",
-      "poster": "https://www.google.com/search?q=garfield&rlz=1C1VDKB_deCH1068CH1072&oq=garfield&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyEAgBEC4YgwEY1AIYsQMYgAQyEAgCEC4YgwEY1AIYsQMYgAQyEAgDEC4YgwEY1AIYsQMYgAQyBwgEEAAYgAQyBwgFEAAYgAQyCggGEC4Y1AIYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgzMDMzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8",
-      "description": "svdfbdfb",
+      "id": "8963",
+      "title": "ejrigheruge",
+      "year": "ergergerge",
+      "genre": "ergergergr",
+      "director": "hrthrthrth",
+      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
+      "description": "a",
+      "reviews": []
+    },
+    {
+      "id": "788a",
+      "title": "ejrigheruge",
+      "year": "ergergerge",
+      "genre": "ergergergr",
+      "director": "hrthrthrth",
+      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
+      "description": "a",
+      "reviews": []
+    },
+    {
+      "id": "6cd9",
+      "title": "ejrigheruge",
+      "year": "ergergerge",
+      "genre": "ergergergr",
+      "director": "hrthrthrth",
+      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
+      "description": "a",
+      "reviews": []
+    },
+    {
+      "id": "9966",
+      "title": "ejrigheruge",
+      "year": "ergergerge",
+      "genre": "ergergergr",
+      "director": "hrthrthrth",
+      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
+      "description": "a",
+      "reviews": []
+    },
+    {
+      "id": "2e85",
+      "title": "gergrht",
+      "year": "tzjrt",
+      "genre": "rthrhth",
+      "director": "rthrth",
+      "poster": "https://images.bild.de/5d4174ef73cf6900016c8c46/48cf27c79cc70986039d2497536e57e7,29b977bc?w=992",
+      "description": "sdfs",
       "reviews": []
     }
   ]
