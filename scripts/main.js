@@ -1,6 +1,3 @@
-// scripts/main.js
-
-// Hilfsfunktionen (ehemals utils.js)
 function formatDate(date) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(date).toLocaleDateString(undefined, options);
@@ -11,7 +8,6 @@ function calculateAverageRating(reviews) {
     return (total / reviews.length).toFixed(1);
 }
 
-// API-Funktionen (ehemals api.js)
 const API_URL = 'http://localhost:3000';
 
 async function getFilms() {
@@ -59,7 +55,6 @@ async function addReview(filmId, review) {
     await updateFilm(film);
 }
 
-// Hauptfunktionalität (ehemals main.js)
 document.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname;
     const urlParams = new URLSearchParams(window.location.search);
@@ -95,7 +90,7 @@ function displayFilmList(films) {
         filmItem.className = 'filmItem';
         filmItem.innerHTML = `
             <div onclick="navigateToDetail('${film.id}')">
-                <img src="${film.poster}" alt="${film.title}">
+                <img src="${film.poster}" alt="${film.title}" onerror="this.style.display='none'">
                 <div class="filmTitle">${film.title}</div>
             </div>
         `;

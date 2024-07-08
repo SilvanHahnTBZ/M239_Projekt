@@ -1,19 +1,65 @@
-/* styles/overview.css */
+
 @import url('main.css');
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #EFC3F5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #7353BA;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#logo {
+    width: 100px;
+}
+
+nav a {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #EFC3F5;
+    color: #333333;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav a:hover {
+    background-color: #FAA6FF;
+}
+
+main {
+    margin-top: 70px;
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 70px);
+}
+
 #overview {
-    background-color: #FFFFFF; /* White */
+    background-color: #EFC3F5;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    margin: 20px 0;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #overviewContainer {
+    margin-top: 200%;
+    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +70,7 @@
     width: 100%;
     margin: 10px 0;
     padding: 20px;
-    background-color: #E3F2FD; /* Light Blue */
+    background-color: #2F195F;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -34,16 +80,16 @@
 
 .overviewItem:hover {
     transform: scale(1.05);
-    background-color: #BBDEFB; /* Lighter Blue */
+    background-color: #7353BA;
 }
 
 .overviewItem h3 {
-    color: #0D47A1; /* Dark Blue */
+    color: #EFC3F5;
     margin-bottom: 10px;
 }
 
 .overviewItem p {
-    color: #0D47A1; /* Dark Blue */
+    color: #ffffff;
     margin: 5px 0;
 }
 
@@ -64,4 +110,62 @@
     color: gold;
     font-size: 1.5em;
     margin-right: 5px;
+}
+
+
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header > * {
+        margin: 5px 0;
+    }
+
+    .overviewItem {
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    nav a {
+        margin: 5px;
+        padding: 5px 10px;
+    }
+
+    .overviewItem {
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #logo {
+        width: 80px;
+    }
+
+    .overviewItem {
+        width: calc(100% - 20px);
+        padding: 10px;
+    }
+
+    main {
+        margin-top: 60px;
+        height: calc(100vh - 60px);
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 5px;
+    }
 }

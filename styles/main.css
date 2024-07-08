@@ -1,21 +1,35 @@
-/* styles/main.css */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F5F1E3; /* Old lace */
-    color: #050505; /* Black */
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 header {
-    background-color: #1B9AAA; /* Blue (Munsell) */
-    color: #FFFFFF; /* White */
+    background-color: #7353BA;
+    color: #ffffff;
     padding: 10px 20px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header > * {
+        margin: 5px 0;
+    }
+}
+
 
 #logo {
     width: 100px;
@@ -24,29 +38,33 @@ header {
 nav a {
     padding: 10px 20px;
     margin: 10px;
-    background-color: #1B9AAA; /* Blue (Munsell) */
-    color: #FFFFFF; /* White */
+    background-color: #EFC3F5;
+    color: #333333;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #17a2a0; /* Slightly lighter blue */
+    background-color: #FAA6FF;
+    transform: scale(1.05);
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 0;
+    height: calc(100vh - 120px);
 }
 
 .hero {
     width: 100%;
-    height: 100vh;
-    background-image: url('images/hero-background.jpg');
+    height: 100%;
+    background-image: url('../images/hero-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -54,7 +72,7 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #FFFFFF; /* White */
+    color: #ffffff;
     position: relative;
 }
 
@@ -65,7 +83,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .hero-content {
@@ -81,51 +99,71 @@ main {
 }
 
 .hero p {
-    font-size: 1.5em;
-    margin-bottom: 40px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 .hero a.button {
+    display: inline-block;
     padding: 15px 30px;
     font-size: 1em;
-    background-color: #1B9AAA; /* Blue (Munsell) */
-    color: #FFFFFF; /* White */
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.hero a.button:hover {
-    background-color: #17a2a0; /* Slightly lighter blue */
-}
-
-footer {
-    background-color: #1B9AAA; /* Blue (Munsell) */
-    color: #FFFFFF; /* White */
-    text-align: center;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    display: none;
-}
-
-footer.visible {
-    display: block;
-}
-/* styles/main.css */
-button, .button {
-    padding: 10px 20px;
-    background-color: #1B9AAA; /* Blue (Munsell) */
-    color: #FFFFFF; /* White */
+    background-color: #EFC3F5;
+    color: #333333;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     cursor: pointer;
     margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero a.button:hover {
+    background-color: #FAA6FF;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+button, .button {
+    padding: 10px 20px;
+    background-color: #EFC3F5;
+    color: #333333;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover, .button:hover {
-    background-color: #17a2a0; /* Slightly lighter blue */
+    background-color: #FAA6FF;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    nav a {
+        padding: 8px 15px;
+        margin: 5px;
+    }
+
+    #logo {
+        width: 80px;
+    }
 }

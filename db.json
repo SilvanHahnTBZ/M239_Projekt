@@ -1,84 +1,84 @@
 {
   "films": [
     {
-      "id": "30c2",
-      "title": "ejrigheruge",
-      "year": "ergergerge",
-      "genre": "ergergergr",
-      "director": "hrthrthrth",
-      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
-      "description": "a",
-      "reviews": []
+      "title": "Garfield",
+      "year": "2002",
+      "genre": "Commedie",
+      "director": "MArkus rühl",
+      "poster": "https://i.ytimg.com/vi/IeFWNtMo1Fs/sddefault.jpg",
+      "description": "Garifield ist ein lustiger film",
+      "reviews": [],
+      "id": 1
     },
     {
-      "id": "78f7",
-      "title": "ejrigheruge",
-      "year": "ergergerge",
-      "genre": "ergergergr",
-      "director": "hrthrthrth",
-      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
-      "description": "a",
-      "reviews": []
+      "title": "Avatar",
+      "year": "2023",
+      "genre": "Action",
+      "director": "Lucas Werner",
+      "poster": "https://musicart.xboxlive.com/7/4d4d6500-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080",
+      "description": "Avatar ist ein sehr spannender film",
+      "reviews": [],
+      "id": 2
     },
     {
-      "id": "7e7e",
-      "title": "ejrigheruge",
-      "year": "ergergerge",
-      "genre": "ergergergr",
-      "director": "hrthrthrth",
-      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
-      "description": "a",
-      "reviews": []
+      "title": "Bad Boys",
+      "year": "2024",
+      "genre": "Action",
+      "director": "Henrich lasindo",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9fCqoTwnMixlsTy35rtugzXvjZjynDVfSJA&s",
+      "description": "Bester Film",
+      "reviews": [],
+      "id": 3
     },
     {
-      "id": "8963",
-      "title": "ejrigheruge",
-      "year": "ergergerge",
-      "genre": "ergergergr",
-      "director": "hrthrthrth",
-      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
-      "description": "a",
-      "reviews": []
+      "title": "Dragons 2",
+      "year": "2010",
+      "genre": "Action",
+      "director": "Henrick andermat",
+      "poster": "https://www.cine-feuilles.ch/storage/app/uploads/public/5a3/e70/007/5a3e700070d96167211875.jpg",
+      "description": "Bester Film",
+      "reviews": [],
+      "id": 4
     },
     {
-      "id": "788a",
-      "title": "ejrigheruge",
-      "year": "ergergerge",
-      "genre": "ergergergr",
-      "director": "hrthrthrth",
-      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
-      "description": "a",
-      "reviews": []
+      "title": "Fuck you göte",
+      "year": "2015",
+      "genre": "Commedie",
+      "director": "MArkus rühl",
+      "poster": "https://musicart.xboxlive.com/7/76995000-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080",
+      "description": "Geiler Film",
+      "reviews": [],
+      "id": 5
     },
     {
-      "id": "6cd9",
-      "title": "ejrigheruge",
-      "year": "ergergerge",
-      "genre": "ergergergr",
-      "director": "hrthrthrth",
-      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
-      "description": "a",
-      "reviews": []
+      "title": "Garfield",
+      "year": "2222",
+      "genre": "IDK",
+      "director": "MArkus rühl",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9fCqoTwnMixlsTy35rtugzXvjZjynDVfSJA&s",
+      "description": "sdsgfg",
+      "reviews": [],
+      "id": 6
     },
     {
-      "id": "9966",
-      "title": "ejrigheruge",
-      "year": "ergergerge",
-      "genre": "ergergergr",
-      "director": "hrthrthrth",
-      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
-      "description": "a",
-      "reviews": []
+      "title": "Garfield",
+      "year": "2002",
+      "genre": "IDK",
+      "director": "MArkus rühl",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9fCqoTwnMixlsTy35rtugzXvjZjynDVfSJA&s",
+      "description": "sgrge",
+      "reviews": [],
+      "id": 7
     },
     {
-      "id": "2e85",
-      "title": "gergrht",
-      "year": "tzjrt",
-      "genre": "rthrhth",
-      "director": "rthrth",
-      "poster": "https://images.bild.de/5d4174ef73cf6900016c8c46/48cf27c79cc70986039d2497536e57e7,29b977bc?w=992",
-      "description": "sdfs",
-      "reviews": []
+      "title": "ejrigheruge",
+      "year": "ergergerge",
+      "genre": "Action",
+      "director": "hrthrthrth",
+      "poster": "https://img.chmedia.ch/2018/6/18/55505a48-e3b1-44b8-8d97-56582213ae3c.jpeg?quality=75&auto=webp?width=480&height=750&fit=bounds&quality=75&auto=webp&crop=1021,1595,x0,y0",
+      "description": "srsgegr",
+      "reviews": [],
+      "id": 8
     }
   ]
 }

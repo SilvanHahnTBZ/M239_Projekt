@@ -1,5 +1,11 @@
-/* styles/film-list.css */
 @import url('main.css');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #EFC3F5;
+    margin: 0;
+    padding: 0;
+}
 
 #filmList {
     width: 100%;
@@ -7,20 +13,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 70px;
 }
 
 #searchBar {
-    width: 50%;
+    width: 80%;
+    max-width: 600px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 20px;
     transition: border-color 0.3s;
+    position: fixed;
+    top: 70px;
+    z-index: 1000;
+    background-color: #ffffff;
 }
 
 #searchBar:focus {
-    border-color: #1B9AAA;
+    border-color: #EFC3F5;
     outline: none;
 }
 
@@ -30,11 +42,17 @@
     justify-content: center;
     gap: 20px;
     width: 100%;
+    margin-top: 100px;
+    overflow-y: auto;
+    padding-top: 20px;
+    height: calc(100vh - 140px);
 }
 
 .filmItem {
     position: relative;
     width: calc(100% / 6 - 20px);
+    height: 300px;
+    background-color: #000000;
     overflow: hidden;
     cursor: pointer;
     border-radius: 5px;
@@ -62,8 +80,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: #FFFFFF; /* White */
+    background: rgba(255, 255, 255, 0.9);
+    color: #000000;
     text-align: center;
     padding: 10px;
     opacity: 0;
@@ -73,4 +91,49 @@
 
 .filmItem:hover .filmTitle {
     opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .filmItem {
+        width: calc(100% / 4 - 20px);
+        height: 250px;
+    }
+
+    #searchBar {
+        top: 60px;
+    }
+
+    #filmsContainer {
+        margin-top: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .filmItem {
+        width: calc(100% / 2 - 20px);
+        height: 200px;
+    }
+
+    #searchBar {
+        top: 50px;
+    }
+
+    #filmsContainer {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filmItem {
+        width: calc(100% - 20px);
+        height: 150px;
+    }
+
+    #searchBar {
+        top: 40px;
+    }
+
+    #filmsContainer {
+        margin-top: 70px;
+    }
 }
